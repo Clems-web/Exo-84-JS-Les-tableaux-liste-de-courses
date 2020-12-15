@@ -24,12 +24,14 @@ divContenu.innerHTML = articles.join(", ");
 buttonAdd.addEventListener("click", function () {
     let newPuce = document.createElement("li");
     newPuce.innerHTML = champ.value;
+
     let bouton = document.createElement("button");
+    bouton.innerHTML = "hide";
+    bouton.style.marginLeft = "2rem";
+
     let newSpan = document.createElement("span");
     newSpan.innerHTML = champ.value + ", ";
 
-    bouton.innerHTML = "hide";
-    bouton.style.marginLeft = "2rem";
     newPuce.append(bouton);
     liste.append(newPuce);
     divContenu.append(newSpan);
